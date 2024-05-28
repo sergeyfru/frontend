@@ -22,7 +22,7 @@ const Home = () => {
 
     const getUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/users/',
+            const response = await axios.get('https://server-h26r.onrender.com/users',
                 {
                     headers: {
                         "x-access-token": token?.token
@@ -36,6 +36,7 @@ const Home = () => {
             setEmail(decoded.email)
 
         } catch (error) {
+            // console.log(error.response.data.msg);
             console.log(error.response.data.msg);
             setEmail('')
         }
