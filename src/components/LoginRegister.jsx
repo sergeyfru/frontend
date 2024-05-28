@@ -17,7 +17,7 @@ const LoginRegister = ({ page }) => {
         if (page === 'Login') {
             try {
                 const response = await axios.post(
-                    'http://localhost:3001/users/login',
+                    'https://server-h26r.onrender.com/login',
                     {
                         email, password
                     },
@@ -38,7 +38,7 @@ const LoginRegister = ({ page }) => {
         }else {
             try {
                 const response = await axios.post(
-                    'http://localhost:3001/users/register',
+                    'https://server-h26r.onrender.com/register',
                     {
                         email, password
                     },
