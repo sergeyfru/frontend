@@ -77,7 +77,7 @@ const LoginRegister = ({ page }) => {
                     variant="outlined"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <Button variant="contained" onClick={loginregister}>{page}</Button>
+                <Button variant="contained" onClick={loginregister} onTouchStart={loginregister}>{page}</Button>
                 <div>{message}</div>
             </Box>
         </>
