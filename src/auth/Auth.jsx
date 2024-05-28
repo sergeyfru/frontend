@@ -13,7 +13,7 @@ const Auth = ({ children }) => {
 
     const verify = async ()=>{
         try {
-            const response = await axios.get('http://localhost:3001/users/verify',{
+            const response = await axios.get('https://server-h26r.onrender.com/users/verify',{
                 headers:{
                     "x-access-token":token?.token
                 },
