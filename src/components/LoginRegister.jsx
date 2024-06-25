@@ -1,7 +1,7 @@
 import { useState,useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from 'axios'
-import { TextField, Box, Button } from "@mui/material"
+import { TextField, Box, Button, Input } from "@mui/material"
 import { AuthContext } from "../App"
 
 const LoginRegister = ({ page }) => {
@@ -69,6 +69,7 @@ const LoginRegister = ({ page }) => {
                     variant="outlined"
                     onChange={(e) => setEmail(e.target.value)}
                 />
+                
                 <TextField
                     sx={{ m: 1 }}
                     id='password'
@@ -80,6 +81,7 @@ const LoginRegister = ({ page }) => {
                 <Button variant="contained" onClick={loginregister} onTouchStart={loginregister}>{page}</Button>
                 <div>{message}</div>
             </Box>
+            
         </>
     )
 }
